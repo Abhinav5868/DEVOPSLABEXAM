@@ -2,8 +2,8 @@ pipeline {
    agent any
    
    environment {
-       DOCKER_CREDENTIALS_ID = 'docker-hub-credentials' // Replace with your Docker ID credentials
-       DOCKER_USERNAME = 'your-docker-username'  // Replace with your Docker Hub username
+       DOCKER_CREDENTIALS_ID = '' // Replace with your Docker ID credentials
+       DOCKER_USERNAME = 'abhinav5868'  // Replace with your Docker Hub username
    }
    
    stages {
