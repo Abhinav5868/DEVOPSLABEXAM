@@ -28,7 +28,7 @@ pipeline {
        stage('Build Docker Image') {
            steps {
                script {
-                   docker.build("${DOCKER_USERNAME}/demo-app:${BUILD_NUMBER}")
+                   docker.build("${DOCKER_USERNAME}/demo-app:latest")
                }
            }
        }
@@ -37,7 +37,7 @@ pipeline {
            steps {
                script {
                    docker.withRegistry('https://registry.hub.docker.com', ${DOCKER_CREDENTIALS_ID}) {
-                       docker.image("${DOCKER_USERNAME}/demo-app:${BUILD_NUMBER}").push()
+                       docker.image("${DOCKER_USERNAME}/demo-app:latest").push()
                    }
                }
            }
