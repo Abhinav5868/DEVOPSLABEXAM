@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class Application {
     public String getMessage() {
-        return "Hello, CI/CD Pipeline!";
+        return "Hello :), CI/CD Pipeline!";
     }
 
     @GetMapping("/")
