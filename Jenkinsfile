@@ -36,7 +36,7 @@ pipeline {
        stage('Push Docker Image') {
            steps {
                script {
-                   docker.withRegistry('https://registry.hub.docker.com', DOCKER_CREDENTIALS_ID) {
+                   docker.withRegistry('https://registry.hub.docker.com', ${DOCKER_CREDENTIALS_ID}) {
                        docker.image("${DOCKER_USERNAME}/demo-app:${BUILD_NUMBER}").push()
                    }
                }
